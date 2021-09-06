@@ -1,6 +1,7 @@
 {
     "name": "syailendra/laravel-firestore",
     "description": "Package for Laravel and Firestore",
+    "license": "MIT",
     "authors": [
         {
             "name": "Danar Arga Syailendra",
