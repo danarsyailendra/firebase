@@ -11,18 +11,18 @@ focusing at firestore integration and support query builder like Laravel with se
     + [Update Data](#update-data)
     + [Delete Data](#delete-data)
 
-## Installation {#installation}
+## Installation
 This package requires :
 + Laravel 6.x and higher
 + gRPC extension
 
-Composer {#composer}
+### Composer
 
 ```composer
 composer require syailendra/laravel-firestore
 ```
 
-Service Provider {#service-provider}
+### Service Provider
 
 ```php
 <?php
@@ -37,9 +37,9 @@ return [
 ];
 ```
 
-## Usage {#usage}
+## Usage
 
-### Read Data {#read-data}
+### Read Data
 
 #### Get Documents from Collection
 ```php
@@ -113,7 +113,7 @@ $getDocs = Firestore::collection('collection_name')
             ->limit(3)
             ->get();
 ```
-### Insert Data {#insert-data}
+### Insert Data
 ```php
 $insert = Firestore::collection('collection_name')
             ->insert([
@@ -123,7 +123,7 @@ $insert = Firestore::collection('collection_name')
             ]);
 ```
 <span style="color:red"><i>Note : always use auto generate id</i></span>.
-### Update Data {#update-data}
+### Update Data
 ```php
 $update = Firestore::collection('collection_name')
             ->whereDoc('document_id')
@@ -133,7 +133,7 @@ $update = Firestore::collection('collection_name')
                 'age' => 19
             ]);
 ```
-### Delete Data {#delete-data}
+### Delete Data
 
 #### Delete Document
 ```php
